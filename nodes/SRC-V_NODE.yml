@@ -5,7 +5,7 @@ operation:
   config:
     insertStrategy: UNION
     postSQL: null
-    preSQL: call {{ref('SRC','SIMPLE')}}('')
+    preSQL: ""
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
