@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "7"
+mappingDefinitions:
+  SRC:
+    database: TEST
+    schema: TEMP
+name: Demo Environment
+type: Environment
