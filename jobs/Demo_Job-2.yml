@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "2"
+includeSelector: "+{name: V_V_NODE}"
+name: Demo_Job
+type: Job

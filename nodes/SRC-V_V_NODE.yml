@@ -1,0 +1,50 @@
+fileVersion: 1
+id: 9a84c71e-d35d-4d69-ae52-5be27be6d104
+name: V_V_NODE
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b25b609b-b5b7-4985-b661-80aeac92ecda
+          stepCounter: 9a84c71e-d35d-4d69-ae52-5be27be6d104
+        config: {}
+        dataType: VARCHAR(3)
+        description: ""
+        name: SNO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 26ad9d98-5e3b-4a37-a84b-e0057fa23f49
+                stepCounter: a6d7af41-03f9-483a-af78-a4751f9003b8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: V_NODE
+        join:
+          joinCondition: FROM {{ ref('SRC', 'V_NODE') }} "V_NODE"
+        name: V_V_NODE
+        noLinkRefs: []
+  name: V_V_NODE
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

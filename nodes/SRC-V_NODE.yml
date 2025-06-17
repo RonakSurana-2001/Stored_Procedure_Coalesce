@@ -1,0 +1,63 @@
+fileVersion: 1
+id: a6d7af41-03f9-483a-af78-a4751f9003b8
+name: V_NODE
+operation:
+  config:
+    insertStrategy: UNION
+    postSQL: null
+    preSQL: call {{ref('SRC','SIMPLE')}}('')
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26ad9d98-5e3b-4a37-a84b-e0057fa23f49
+          stepCounter: a6d7af41-03f9-483a-af78-a4751f9003b8
+        config: {}
+        dataType: VARCHAR(3)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SNO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('SRC', 'V_NODE')}} AS (
+            		SELECT 
+             FROM 
+            	)
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: V_NODE
+        noLinkRefs: []
+  name: V_NODE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

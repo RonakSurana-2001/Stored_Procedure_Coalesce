@@ -1,0 +1,59 @@
+fileVersion: 1
+id: 138518b3-c769-490d-bdfc-dd1c09c21e81
+name: SIMPLE
+operation:
+  config:
+    SQL1: |-
+      CREATE OR REPLACE PROCEDURE TEST.TEMP.SIMPLE("MESSAGE" STRING)
+      RETURNS STRING
+      LANGUAGE SQL
+      EXECUTE AS OWNER
+      AS '
+      begin
+          INSERT INTO V_NODE(SNO) VALUES(1);
+      end;
+      ';
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd780ee0-98d3-4c9b-af3b-7bb0995ef49c
+          stepCounter: 138518b3-c769-490d-bdfc-dd1c09c21e81
+        config: {}
+        dataType: NUMBER IDENTITY
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: SQL_SEQ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: SIMPLE
+        noLinkRefs: []
+  name: SIMPLE
+  overrideSQL: false
+  schema: ""
+  sqlType: "4"
+  type: sql
+  version: 1
+type: Node
